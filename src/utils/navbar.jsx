@@ -1,3 +1,7 @@
+import { store } from "~/store";
+
+const accountPath = `${store.getState()?.auth.currentAccount?.nickName}`;
+
 export const navbar = [
   {
     path: "/",
@@ -155,7 +159,7 @@ export const navbar = [
     },
   },
   {
-    path: "/profile",
+    path: `/${accountPath}`,
     title: "Profil",
     icon: {
       active: (

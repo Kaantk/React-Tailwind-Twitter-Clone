@@ -27,7 +27,7 @@ export default function Account() {
                 {currentAccount.userName}
               </span>
               <span className="text-[#71767b] text-[0.938rem]">
-                {currentAccount.nickName}
+                @{currentAccount.nickName}
               </span>
             </div>
             <svg
@@ -69,7 +69,7 @@ export default function Account() {
                   {account.userName}
                 </span>
                 <span className="text-[#71767b] text-[0.938rem]">
-                  {account.nickName}
+                  @{account.nickName}
                 </span>
               </div>
             </div>

@@ -4,7 +4,7 @@ const initialState = {
   currentAccount: {
     id: 1,
     userName: "Kaan Tetik",
-    nickName: "@Kaan.tk2",
+    nickName: "Kaan.tk2",
     avatar:
       "https://pbs.twimg.com/profile_images/1690999623245049856/SWu5MQpT_400x400.jpg",
   },
@@ -12,14 +12,14 @@ const initialState = {
     {
       id: 1,
       userName: "Kaan Tetik",
-      nickName: "@Kaan.tk2",
+      nickName: "Kaan.tk2",
       avatar:
         "https://pbs.twimg.com/profile_images/1690999623245049856/SWu5MQpT_400x400.jpg",
     },
     {
       id: 2,
       userName: "tayfunerbilen",
-      nickName: "@prototurk",
+      nickName: "prototurk",
       avatar:
         "https://pbs.twimg.com/profile_images/1665642354009677824/LNZo7V8x_400x400.jpg",
     },
