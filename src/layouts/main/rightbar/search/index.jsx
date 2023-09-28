@@ -13,9 +13,9 @@ export default function Search() {
   return (
     <div
       ref={ref}
-      className="min-h-[32px] h-[53px] mb-3 flex items-center sticky top-0 z-10 bg-black"
+      className="min-h-[32px] h-[53px] mb-3 flex items-center sticky top-0 z-10 bg-[color:var(--background-primary)]"
     >
-      <label className="h-[43px] rounded-full bg-[#202327] w-full relative group border border-transparent focus-within:border-[#1d9bf0] focus-within:bg-black">
+      <label className="h-[43px] rounded-full bg-[color:var(--background-third)] w-full relative group border border-transparent focus-within:border-[#1d9bf0] focus-within:bg-[--background-primary]">
         <div className="w-[56px] h-full flex items-center justify-center absolute top-0 left-0 pointer-events-none">
           <svg
             viewBox="0 0 24 24"
@@ -40,7 +40,7 @@ export default function Search() {
           <button
             type="button"
             onClick={() => setQuery("")}
-            className="w-[22px] h-[22px] rounded-full bg-primary  flex items-center justify-center text-black min-w-[22px] absolute top-1/2 -translate-y-1/2 right-3"
+            className="w-[22px] h-[22px] rounded-full bg-primary bg-[color:var(--color-primary)]  flex items-center justify-center text-[(--color-base)] min-w-[22px] absolute top-1/2 -translate-y-1/2 right-3"
           >
             <svg viewBox="0 0 15 15" width={10} height={10}>
               <path
@@ -52,7 +52,7 @@ export default function Search() {
         )}
       </label>
       {focus && (
-        <div className="absolute w-[350px] top-full -left-px -translate-y-1 bg-black shadow-box max-h-[calc(80vh-53px)] rounded-lg text-center min-h-[100px] shadow-moreBox ">
+        <div className="absolute w-[350px] top-full -left-px -translate-y-1 bg-[color:var(--background-primary)] shadow-box max-h-[calc(80vh-53px)] rounded-lg text-center min-h-[100px] shadow-boxShadow ">
           <p className="p-3 pt-5 text-[#71767b] leading-5">
             Kişileri, listeleri veya anahtar kelimeleri aramayı dene
           </p>

@@ -19,7 +19,7 @@ export default function UserCard({ user }) {
           <div className="flex items-center">
             <a
               href="#"
-              className="hover:underline leading-5 text-[0.938rem] font-bold text-[#e7e9ea]"
+              className="hover:underline leading-5 text-[0.938rem] font-bold text-[color:var(--color-base)]"
             >
               {user.userName.length > 12 && following === true
                 ? user.userName.slice(0, 12) + "..."

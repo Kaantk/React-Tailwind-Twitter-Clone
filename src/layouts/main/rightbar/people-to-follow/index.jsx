@@ -3,9 +3,9 @@ import UserCard from "./persons";
 
 export default function PeopleToFollow() {
   return (
-    <div className="mb-4 rounded-2xl bg-[#16181c] overflow-hidden">
+    <div className="mb-4 rounded-2xl bg-[color:var(--background-secondary)] overflow-hidden">
       <aside>
-        <h4 className="py-3 px-4 font-extrabold leading-6 text-[1.25rem] text-[#e7e9ea]">
+        <h4 className="py-3 px-4 font-extrabold leading-6 text-[1.25rem] text-[color:var(--color-base)]">
           Kimi takip etmeli
         </h4>
         <div>

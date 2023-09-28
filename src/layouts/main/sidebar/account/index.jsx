@@ -9,7 +9,7 @@ export default function Account() {
 
   return (
     <Popover className="relative">
-      <Popover.Button className="w-full outline-none">
+      <Popover.Button className="w-full outline-none text-[--color-base]">
         {({ open }) => (
           <div
             className={classNames(
@@ -23,7 +23,7 @@ export default function Account() {
               className="h-10 w-10 rounded-full"
             />
             <div className="flex flex-col items-start mx-3">
-              <span className="text-extraLight-gray font-semibold text-[0.938rem]">
+              <span className="text-[color:var(--color-base)] font-semibold text-[0.938rem]">
                 {currentAccount.userName}
               </span>
               <span className="text-[#71767b] text-[0.938rem]">
@@ -45,7 +45,7 @@ export default function Account() {
         )}
       </Popover.Button>
 
-      <Popover.Panel className="absolute w-[18.75rem] rounded-xl overflow-hidden z-10 left-0 -top-[335px] bg-black shadow-moreBox py-3 ">
+      <Popover.Panel className="absolute w-[18.75rem] rounded-xl overflow-hidden z-10 left-0 -top-[320px] bg-[color:var(--background-primary)] shadow-box py-3 text-[--color-base]">
         {accounts.map((account, index) => (
           <button
             key={index}
@@ -58,14 +58,14 @@ export default function Account() {
             )}
             onClick={() => setCurrentAccount(account)}
           >
-            <div className="flex items-center">
+            <div className="flex items-center text-[--color-base]">
               <img
                 src={account.avatar}
                 alt={`${account.userName} avatar`}
                 className="w-10 h-10 rounded-full"
               />
               <div className="flex flex-col items-start mx-3">
-                <span className="text-extraLight-gray font-semibold text-[0.938rem]">
+                <span className="text-[color:var(--color-base)] font-semibold text-[0.938rem]">
                   {account.userName}
                 </span>
                 <span className="text-[#71767b] text-[0.938rem]">
@@ -89,12 +89,15 @@ export default function Account() {
           </button>
         ))}
 
-        <div role="seperator" className="w-full h-px bg-[#2f3336] my-3" />
+        <div
+          role="seperator"
+          className="w-full h-px bg-[color:var(--background-third)] my-3"
+        />
 
-        <button className="text-extraLight-gray text-[0.938rem] leading-5 font-bold py-3 px-4 hover:bg-[#e7e9ea1a] w-full flex">
+        <button className="text-[color:var(--color-base)] text-[0.938rem] leading-5 font-bold py-3 px-4 hover:bg-[#e7e9ea1a] w-full flex">
           Var olan bir hesap ekle
         </button>
-        <button className="text-extraLight-gray text-[0.938rem] leading-5 font-bold py-3 px-4 hover:bg-[#e7e9ea1a] w-full flex">
+        <button className="text-[color:var(--color-base)] text-[0.938rem] leading-5 font-bold py-3 px-4 hover:bg-[#e7e9ea1a] w-full flex">
           Hesapları yönet
         </button>
         <button className="py-3 px-4 text-left transition-colors hover:bg-[#eff3f41a] w-full text-[0.938rem] font-bold leading-5">
