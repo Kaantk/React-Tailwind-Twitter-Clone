@@ -6,7 +6,7 @@ export default function More() {
   return (
     <Popover className="relative text-[--color-base]">
       <Popover.Button className="flex group py-1 outline-none">
-        <div className="inline-flex p-3 group-hover:bg-[#e7e9ea1a] rounded-full">
+        <div className="inline-flex p-3 group-hover:bg-[color:var(--background-hover)] rounded-full">
           <svg viewBox="0 0 24 24" width={26.25} height={26.25}>
             <path
               fill="currentColor"

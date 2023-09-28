@@ -14,7 +14,10 @@ export default function Account() {
           <div
             className={classNames(
               "my-3 p-3 rounded-full flex items-center w-full",
-              { "hover:bg-[#e7e9ea1a] transition-colors": !open }
+              {
+                "hover:bg-[color:var(--background-hover)] transition-colors":
+                  !open,
+              }
             )}
           >
             <img
@@ -53,7 +56,8 @@ export default function Account() {
             className={classNames(
               "py-3 px-4 flex items-center w-full justify-between",
               {
-                "hover:bg-[#e7e9ea1a]": account.id !== currentAccount.id,
+                "hover:bg-[color:var(--background-hover)]":
+                  account.id !== currentAccount.id,
               }
             )}
             onClick={() => setCurrentAccount(account)}
@@ -94,10 +98,10 @@ export default function Account() {
           className="w-full h-px bg-[color:var(--background-third)] my-3"
         />
 
-        <button className="text-[color:var(--color-base)] text-[0.938rem] leading-5 font-bold py-3 px-4 hover:bg-[#e7e9ea1a] w-full flex">
+        <button className="text-[color:var(--color-base)] text-[0.938rem] leading-5 font-bold py-3 px-4 hover:bg-[color:var(--background-hover)] w-full flex">
           Var olan bir hesap ekle
         </button>
-        <button className="text-[color:var(--color-base)] text-[0.938rem] leading-5 font-bold py-3 px-4 hover:bg-[#e7e9ea1a] w-full flex">
+        <button className="text-[color:var(--color-base)] text-[0.938rem] leading-5 font-bold py-3 px-4 hover:bg-[color:var(--background-hover)] w-full flex">
           Hesapları yönet
         </button>
         <button className="py-3 px-4 text-left transition-colors hover:bg-[#eff3f41a] w-full text-[0.938rem] font-bold leading-5">

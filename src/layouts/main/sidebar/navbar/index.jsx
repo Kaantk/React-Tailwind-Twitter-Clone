@@ -14,7 +14,7 @@ export default function Navbar() {
             className="flex group py-1 text-[--color-base]"
           >
             {({ isActive }) => (
-              <div className="inline-flex p-3 group-hover:bg-[#e7e9ea1a] rounded-full relative">
+              <div className="inline-flex p-3 group-hover:bg-[color:var(--background-hover)] rounded-full relative">
                 {isActive ? link?.icon.active : link?.icon.passive}
                 <div>
                   {link?.notification > 0 && (

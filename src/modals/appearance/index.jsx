@@ -1,9 +1,15 @@
+import {
+  setBackgroundColor,
+  setBoxShadow,
+  setColor,
+} from "~/store/appearance/actions";
 import { useAppearance } from "~/store/appearance/hooks";
 import { setModal } from "~/store/modal/actions";
+import { colors } from "~/utils/colors";
 
 export default function AppearenceModal() {
   const appearance = useAppearance();
-  console.log(appearance);
+
   return (
     <div className="flex flex-col w-[37.5rem] items-center bg-[color:var(--background-primary)]">
       <div className="mt-8 mb-3 leading-7 w-full flex justify-center text-[1.438rem] font-bold text-[color:var(--color-base)]">
@@ -51,17 +57,77 @@ export default function AppearenceModal() {
           <p className="text-[color:var(--color-baseSecondary)] font-bold text-[0.813rem] mb-1 ">
             Arka plan
           </p>
-          <div className="bg-[color:var(--background-secondary)] mb-3 rounded-2xl py-1 px-3 flex items-center justify-center">
-            <button className="min-h-16 px-5 m-1 rounded bg-[#fff] border-2 border-transparent focus-within:border-[#1d9bf0] w-[10.125rem] h-16 font-bold leading-5 text-[#000] text-[0.938rem]">
+          <section className="bg-[color:var(--background-secondary)] mb-3 rounded-2xl py-1 px-3 flex items-center justify-center">
+            <button
+              onClick={() => {
+                setColor({
+                  ...colors,
+                  base: "#0f1419",
+                  baseSecondary: "#536471",
+                });
+                setBackgroundColor({
+                  name: "light",
+                  primary: "#fff",
+                  secondary: "#f7f9f9",
+                  third: "#eff3f4",
+                  modal: "#00000066",
+                  hover: "#0f14191a",
+                  lightHover: "#00000008",
+                });
+                setBoxShadow(
+                  "rgba(101, 119, 134, 0.2) 0px 0px 15px, rgba(101, 119, 134, 0.15) 0px 0px 3px 1px"
+                );
+              }}
+              className="min-h-16 px-5 m-1 rounded bg-[#fff] border-2 border-transparent focus-within:border-[#1d9bf0] w-[10.125rem] h-16 font-bold leading-5 text-[#000] text-[0.938rem]"
+            >
               Varsayılan
             </button>
-            <button className="min-h-16 px-5 m-1 rounded bg-[#15202b] border-2 border-transparent focus-within:border-[#1d9bf0] w-[10.125rem] h-16 font-bold leading-5 text-[#e7e9ea] text-[0.938rem]">
+            <button
+              onClick={() => {
+                setColor({
+                  ...colors,
+                  base: "#f7f9f9",
+                  baseSecondary: "#8b98a5",
+                });
+                setBackgroundColor({
+                  name: "dark",
+                  primary: "#15202b",
+                  secondary: "#1e2732",
+                  third: "#263340",
+                  modal: "#5b708366",
+                  hover: "#e7e9ea1a",
+                  lightHover: "#ffffff08",
+                });
+              }}
+              className="min-h-16 px-5 m-1 rounded bg-[#15202b] border-2 border-transparent focus-within:border-[#1d9bf0] w-[10.125rem] h-16 font-bold leading-5 text-[#e7e9ea] text-[0.938rem]"
+            >
               Loş
             </button>
-            <button className="min-h-16 px-5 m-1 rounded bg-[#000] border-2 border-transparent focus-within:border-[#1d9bf0] w-[10.125rem] h-16 font-bold leading-5 text-[#e7e9ea] text-[0.938rem]">
+            <button
+              onClick={() => {
+                setColor({
+                  ...colors,
+                  base: "#e7e9ea",
+                  baseSecondary: "#71767b",
+                });
+                setBackgroundColor({
+                  name: "darker",
+                  primary: "#000",
+                  secondary: "#16181c",
+                  third: "#212327",
+                  modal: "#5b708366",
+                  hover: "#e7e9ea1a",
+                  lightHover: "#ffffff08",
+                });
+                setBoxShadow(
+                  "rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1px"
+                );
+              }}
+              className="min-h-16 px-5 m-1 rounded bg-[#000] border-2 border-transparent focus-within:border-[#1d9bf0] w-[10.125rem] h-16 font-bold leading-5 text-[#e7e9ea] text-[0.938rem]"
+            >
               Işıklar kapalı
             </button>
-          </div>
+          </section>
         </div>
         <button
           onClick={() => setModal("appearance", false)}

@@ -4,7 +4,7 @@ export default function Logo() {
   return (
     <h1
       role="heading"
-      className="my-0.5 w-[3.25rem] h-[3.25rem] inline-flex items-center justify-center hover:bg-lighest-gray transition-colors rounded-full cursor-pointer text-[--color-base]"
+      className="my-0.5 w-[3.25rem] h-[3.25rem] inline-flex items-center justify-center hover:bg-[color:var(--background-hover)] transition-colors rounded-full cursor-pointer text-[--color-base]"
     >
       <NavLink to="/">
         <svg viewBox="0 0 24 24" width={30} height={50}>

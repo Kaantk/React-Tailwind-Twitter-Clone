@@ -12,7 +12,7 @@ export default function Topics() {
       {topics.map((topic, index) => (
         <Link
           key={index}
-          className="py-3 px-4 transition-colors hover:bg-white/[0.03] flex justify-between group"
+          className="py-3 px-4 transition-colors hover:bg-[color:var(--background-lightHover)] flex justify-between group"
         >
           <div className="flex flex-col">
             <span className="text-[0.813rem] text-[#71767b] leading-4">
@@ -39,7 +39,7 @@ export default function Topics() {
             </Popover.Button>
 
             <Popover.Panel className="absolute z-10 bg-[color:var(--background-primary)] shadow-box w-[23.813rem] rounded-xl right-0 top-0">
-              <button className="hover:bg-[#ffffff08] w-full flex items-center py-3 px-4">
+              <button className="hover:bg-[color:var(--background-lightHover)] w-full flex items-center py-3 px-4">
                 <svg
                   viewBox="0 0 24 24"
                   width={18.75}
@@ -55,7 +55,7 @@ export default function Topics() {
                   İlgimi çekmiyor
                 </span>
               </button>
-              <button className="hover:bg-[#ffffff08] w-full flex items-center py-3 px-4">
+              <button className="hover:bg-[color:var(--background-lightHover)] w-full flex items-center py-3 px-4">
                 <svg
                   viewBox="0 0 24 24"
                   width={18.75}
@@ -75,7 +75,7 @@ export default function Topics() {
           </Popover>
         </Link>
       ))}
-      <button className="p-4 hover:bg-white/[0.03] w-full text-primary text-[0.938rem] leading-5 inline-flex rounded-b-2xl">
+      <button className="p-4 hover:bg-[color:var(--background-lightHover)] w-full text-primary text-[0.938rem] leading-5 inline-flex rounded-b-2xl">
         Daha fazla göster
       </button>
     </div>

@@ -8,7 +8,7 @@ export default function UserCard({ user }) {
   const [following, setFollowing] = useState(false);
 
   return (
-    <button className="py-3 px-4 w-full flex items-center justify-between hover:bg-[#ffffff08] transition-colors">
+    <button className="py-3 px-4 w-full flex items-center justify-between hover:bg-[color:var(--background-lightHover)] transition-colors">
       <div className="flex items-center flex-1">
         <img
           src={user.avatar}

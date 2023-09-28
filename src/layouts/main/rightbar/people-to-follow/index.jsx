@@ -14,7 +14,7 @@ export default function PeopleToFollow() {
           ))}
         </div>
       </aside>
-      <button className="p-4 hover:bg-white/[0.03] w-full text-primary text-[0.938rem] leading-5 inline-flex">
+      <button className="p-4 hover:bg-[color:var(--background-lightHover)] w-full text-primary text-[0.938rem] leading-5 inline-flex">
         Daha fazla göster
       </button>
     </div>

@@ -24,6 +24,10 @@ export default function MainLayout() {
       appearance.backgroundColor.third
     );
     document.documentElement.style.setProperty(
+      "--background-lightHover",
+      appearance.backgroundColor.lightHover
+    );
+    document.documentElement.style.setProperty(
       "--color-primary",
       appearance.backgroundColor.primary
     );
@@ -34,6 +38,14 @@ export default function MainLayout() {
     document.documentElement.style.setProperty(
       "--color-third",
       appearance.backgroundColor.third
+    );
+    document.documentElement.style.setProperty(
+      "--background-model",
+      appearance.backgroundColor.modal
+    );
+    document.documentElement.style.setProperty(
+      "--background-hover",
+      appearance.backgroundColor.hover
     );
     document.documentElement.style.setProperty(
       "--color-base",
